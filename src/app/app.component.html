@@ -1,0 +1,13 @@
+<h1>Metronik Sample app</h1>
+
+<div class="note-input">
+  <input id="newNotes" type="text" placeholder="Add a new order">
+  <button (click)="addNotes()">Add Order</button>
+</div>
+
+<div class="note-list">
+  <div *ngFor="let note of notes" class="note">
+    <b>{{ note.description }}</b>
+    <button (click)="deleteNotes(note.id)" class="delete-button">Delete Order</button>
+  </div>
+</div>
